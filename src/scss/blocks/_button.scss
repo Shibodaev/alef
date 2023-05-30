@@ -1,0 +1,32 @@
+:root {
+    --w: 3px;
+    --h: 15px;
+}
+.button {
+    &-add {
+        @apply relative ;
+        &:after,
+        &:before {
+            content:'';
+            @apply absolute bg-green-500 transition-all;
+        }
+        &:after {
+            @apply  left-2/4 -translate-x-2/4;
+            width: var(--h);
+            height: var(--w);
+            margin-left: 1px;
+        }
+        &:before {
+            @apply  top-2/4 -translate-y-2/4;
+            margin-top: 2px;
+           height: var(--h);
+            width: var(--w);
+        }
+        &:hover {
+            &:after,
+            &:before {
+                @apply bg-green-600;
+            }
+        }
+    }
+}

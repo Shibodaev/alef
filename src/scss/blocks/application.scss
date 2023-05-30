@@ -1,0 +1,14 @@
+.application {
+   display: grid;
+    grid-template-columns: var(--sidebar) calc(100% - var(--sidebar));
+    grid-column-gap: 30px;
+    padding:  0 15px;
+
+    &__main {
+        padding: 15px 0;
+    }
+    &__sidebar {
+        padding: 15px 0;
+        border-right: var(--default-border);
+    }
+}
