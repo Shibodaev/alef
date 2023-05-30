@@ -21,14 +21,10 @@
             v-for="(item, index) in viewStorePerson.children"
             :key="index"
           >
-            <template>
-              <span v-if="item.name" class="inline-block"
-                >{{ item.name }},</span
-              >
-              <span v-if="item.age" class="inline-block ml-1"
-                >{{ item.age }} лет</span
-              >
-            </template>
+            <span v-if="item.name" class="inline-block">{{ item.name }},</span>
+            <span v-if="item.age" class="inline-block ml-1"
+              >{{ item.age }} лет</span
+            >
           </li>
         </ul>
       </div>
